@@ -97,5 +97,12 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
+	// TODO
+	/*
+	Méthode qui compare deux CD et retourne VRAI
+	si celui qui appelle la méthode est + grand que celui en paramètres
+	 */
+	public boolean compareCD(Cd c2){
+		throw new Error("Not implemented yet");
+	}
 }
