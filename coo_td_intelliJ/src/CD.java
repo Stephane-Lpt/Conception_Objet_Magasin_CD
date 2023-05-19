@@ -99,10 +99,26 @@ public class CD {
 
 	// TODO
 	/*
-	Méthode qui compare deux CD et retourne VRAI
+	Méthode qui compare deux CD et retourne 1
 	si celui qui appelle la méthode est + grand que celui en paramètres
+	-1 si celui qui appelle la méthode est + petit que celui en paramètres
+	0 si ils sont égaux.
 	 */
-	public boolean compareCD(Cd c2){
-		throw new Error("Not implemented yet");
+	public int compareCD(CD c2){
+		// Si le nom du CD qui appelle la méthode est égal à celui en paramètres
+		if(this.nomCD.compareTo(c2.nomCD) == 0 ){
+			// Si Condition ci dessus + la même chose pour le nom de l'artiste
+			if(this.nomArtiste.compareTo(c2.nomArtiste) == 0){
+				return 0;
+			}else if(this.nomArtiste.compareTo(c2.nomArtiste) < 0){
+				return -1;
+			}else{
+				return 1;
+			}
+		}else if(this.nomCD.compareTo(c2.nomCD) < 0){
+			return -1;
+		}else{
+			return 1;
+		}
 	}
 }
