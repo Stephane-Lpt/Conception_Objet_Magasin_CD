@@ -1,8 +1,10 @@
-import donnees.*;
-import org.junit.Before;
+import donnees.CD;
+import donnees.ComparateurArtiste;
+import donnees.Magasin;
 import org.junit.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.*;
+
 public class TestTriSelection {
     @Test
     public void testTri(){
@@ -14,9 +16,10 @@ public class TestTriSelection {
        m.ajouteCd(cd1);
        m.ajouteCd(cd2);
        m.ajouteCd(cd3);
+       ComparateurArtiste c = new ComparateurArtiste();
 
        // Méthode pour trier les CDs
-        m.trierCDs();
+        m.trier(c);
 
         assertEquals(m.getCd(0), cd3);
     }
