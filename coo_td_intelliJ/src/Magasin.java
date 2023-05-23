@@ -88,6 +88,10 @@ public class Magasin {
 	}
 */
 
+	/**
+	 * Tri par sélection selon un comparateur donné (selon l'artiste, le nom du Cd etc ...)
+	 * @param comparateur
+	 */
 	public void trier(ComparateurCd comparateur){
 		int nbCDs = this.listeCds.size();
 		for(int i=0;i<nbCDs;i++){
