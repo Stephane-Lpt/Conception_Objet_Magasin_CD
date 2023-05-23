@@ -70,14 +70,12 @@ public class Magasin {
 
 	// TODO  ajouter une methode de tri
 	/*
-
-	 */
 	public void trierCDs(){
 		for(int i = 0; i < this.listeCds.size() - 1; i++){
 			int indice = i;
 			CD min = this.listeCds.get(i);
 			for(int j = i; j < this.listeCds.size() - 1; j++){
-				if(min.compareNomCD(this.listeCds.get(j+1)) > 0){
+				if(min.compareNomCD(this.listeCds.get(j+1))){
 					indice = j + 1;
 				}
 			}
@@ -88,7 +86,7 @@ public class Magasin {
 
 		}
 	}
-
+*/
 
 
 
@@ -101,7 +99,7 @@ public class Magasin {
 			int indiceSelection = i;
 			for (int j=i+1;j<nbCDs;j++){
 				CD cdTemp = listeCds.get(j);
-				if(cdTemp.etreAvantArtiste(cdSelectionne)){
+				if(cdTemp.compareArtisteCD(cdSelectionne)){
 					indiceSelection = j;
 					cdSelectionne = cdTemp;
 				}
@@ -111,7 +109,7 @@ public class Magasin {
 		}
 	}
 
-	public void trierArtiste(){
+	public void trierAlbum(){
 		int nbCDs = this.listeCds.size();
 		for(int i=0;i<nbCDs;i++){
 			CD cdSelectionne = this.listeCds.get(i);
@@ -120,7 +118,7 @@ public class Magasin {
 			int indiceSelection = i;
 			for (int j=i+1;j<nbCDs;j++){
 				CD cdTemp = listeCds.get(j);
-				if(cdTemp.etreAvantArtiste(cdSelectionne)){
+				if(cdTemp.compareNomCD(cdSelectionne)){
 					indiceSelection = j;
 					cdSelectionne = cdTemp;
 				}
