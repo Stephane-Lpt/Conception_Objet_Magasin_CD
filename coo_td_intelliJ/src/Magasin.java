@@ -88,4 +88,45 @@ public class Magasin {
 
 		}
 	}
+
+
+
+
+	public void trierArtiste(){
+		int nbCDs = this.listeCds.size();
+		for(int i=0;i<nbCDs;i++){
+			CD cdSelectionne = this.listeCds.get(i);
+
+			// Selectionne le plus petit
+			int indiceSelection = i;
+			for (int j=i+1;j<nbCDs;j++){
+				CD cdTemp = listeCds.get(j);
+				if(cdTemp.etreAvantArtiste(cdSelectionne)){
+					indiceSelection = j;
+					cdSelectionne = cdTemp;
+				}
+			}
+			listeCds.set(indiceSelection, listeCds.get(i));
+			listeCds.set(i,cdSelectionne);
+		}
+	}
+
+	public void trierArtiste(){
+		int nbCDs = this.listeCds.size();
+		for(int i=0;i<nbCDs;i++){
+			CD cdSelectionne = this.listeCds.get(i);
+
+			// Selectionne le plus petit
+			int indiceSelection = i;
+			for (int j=i+1;j<nbCDs;j++){
+				CD cdTemp = listeCds.get(j);
+				if(cdTemp.etreAvantArtiste(cdSelectionne)){
+					indiceSelection = j;
+					cdSelectionne = cdTemp;
+				}
+			}
+			listeCds.set(indiceSelection, listeCds.get(i));
+			listeCds.set(i,cdSelectionne);
+		}
+	}
 }
