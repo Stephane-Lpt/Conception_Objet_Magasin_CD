@@ -3,7 +3,7 @@ package donnees;
 import java.io.IOException;
 import java.util.Scanner;
 
-import XML.ChargeurMagasin;
+import donnees.XML.ChargeurMagasin;
 
 /**
  * permet de charger un magasin de test
@@ -29,11 +29,6 @@ public class MainChargeurMagasin {
 		sc.nextLine();
 		sc.close();
 
-		resultat.trierAriste();
-		System.out.println(resultat);
-
-		resultat.trierAlbum();
-		System.out.println(resultat);
 
 	}
 

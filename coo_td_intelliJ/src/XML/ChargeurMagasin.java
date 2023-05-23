@@ -1,4 +1,4 @@
-package XML;
+package donnees.XML;
 
 import java.io.File;
 import java.io.FileNotFoundException;

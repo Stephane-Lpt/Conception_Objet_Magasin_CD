@@ -1,6 +1,6 @@
 package donnees;
 
-import XML.ChargeurCD;
+import donnees.XML.ChargeurCD;
 
 import java.io.IOException;
 
