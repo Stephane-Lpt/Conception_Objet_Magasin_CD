@@ -101,8 +101,8 @@ public class CD {
 		return this.nomArtiste;
 	}
 
-	public String getNom(){
-		return this.nomCD
+	public String getNomCD(){
+		return this.nomCD;
 	}
 
 	// TODO
