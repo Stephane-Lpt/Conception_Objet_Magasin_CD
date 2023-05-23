@@ -104,21 +104,12 @@ public class CD {
 	-1 si celui qui appelle la méthode est + petit que celui en paramètres
 	0 si ils sont égaux.
 	 */
-	public int compareCD(CD c2){
+	public boolean compareNomCD(CD c2){
 		// Si le nom du CD qui appelle la méthode est égal à celui en paramètres
-		if(this.nomCD.compareTo(c2.nomCD) == 0 ){
-			// Si Condition ci dessus + la même chose pour le nom de l'artiste
-			if(this.nomArtiste.compareTo(c2.nomArtiste) == 0){
-				return 0;
-			}else if(this.nomArtiste.compareTo(c2.nomArtiste) < 0){
-				return -1;
-			}else{
-				return 1;
-			}
-		}else if(this.nomCD.compareTo(c2.nomCD) < 0){
-			return -1;
-		}else{
-			return 1;
-		}
+		return this.nomCD.compareTo(c2.nomCD) < 0;
+	}
+
+	public boolean compareArtisteCD(CD c2){
+		return this.nomArtiste.compareTo(c2.nomArtiste) < 0;
 	}
 }

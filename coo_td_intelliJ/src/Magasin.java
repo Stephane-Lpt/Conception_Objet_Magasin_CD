@@ -73,6 +73,19 @@ public class Magasin {
 
 	 */
 	public void trierCDs(){
-		throw new Error("");
+		for(int i = 0; i < this.listeCds.size() - 1; i++){
+			int indice = i;
+			CD min = this.listeCds.get(i);
+			for(int j = i; j < this.listeCds.size() - 1; j++){
+				if(min.compareNomCD(this.listeCds.get(j+1)) > 0){
+					indice = j + 1;
+				}
+			}
+			// Minimum qu'on obtient grace au parcours de la boucle
+			CD minimum = this.listeCds.get(indice);
+			this.listeCds.set(indice, this.listeCds.get(i));
+			this.listeCds.set(i, minimum);
+
+		}
 	}
 }

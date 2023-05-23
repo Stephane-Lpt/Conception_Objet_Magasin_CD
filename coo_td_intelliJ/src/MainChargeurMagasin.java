@@ -1,9 +1,8 @@
-package main;
+package donnees;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import donnees.Magasin;
 import XML.ChargeurMagasin;
 
 /**
