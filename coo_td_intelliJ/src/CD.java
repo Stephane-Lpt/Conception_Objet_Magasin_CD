@@ -97,19 +97,14 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO
-	/*
-	Méthode qui compare deux CD et retourne 1
-	si celui qui appelle la méthode est + grand que celui en paramètres
-	-1 si celui qui appelle la méthode est + petit que celui en paramètres
-	0 si ils sont égaux.
-	 */
-	public boolean compareNomCD(CD c2){
-		// Si le nom du CD qui appelle la méthode est égal à celui en paramètres
-		return this.nomCD.compareTo(c2.nomCD) < 0;
+	public String getNomArtiste(){
+		return this.nomArtiste;
 	}
 
-	public boolean compareArtisteCD(CD c2){
-		return this.nomArtiste.compareTo(c2.nomArtiste) < 0;
+	public String getNom(){
+		return this.nomCD
 	}
+
+	// TODO
+
 }
